@@ -68,8 +68,8 @@ async fn main() -> anyhow::Result<()> {
     let cors = CorsLayer::new()
         .allow_origin([
             "http://localhost:3000".parse::<HeaderValue>()?,
-            "honestly-80pcf0rqr-luke-nams-projects.vercel.app".parse::<HeaderValue>()?,  // 원하는 도메인으로 변경
-            "https://honestly-80pcf0rqr-luke-nams-projects.vercel.app/".parse::<HeaderValue>()?,  // www 버전도 추가
+            "https://honestly-4xchoyd9u-luke-nams-projects.vercel.app/".parse::<HeaderValue>()?,  // 원하는 도메인으로 변경
+            "honestly-80pcf0rqr-luke-nams-projects.vercel.app".parse::<HeaderValue>()?,  // www 버전도 추가
         ])
         .allow_methods([
             Method::GET,
