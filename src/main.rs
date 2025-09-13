@@ -68,7 +68,7 @@ async fn main() -> anyhow::Result<()> {
     let cors = CorsLayer::new()
         .allow_origin([
             "http://localhost:3000".parse::<HeaderValue>()?,
-            "https://honestly.space/".parse::<HeaderValue>()?,  // 원하는 도메인으로 변경
+            "https://honestly.space".parse::<HeaderValue>()?,  // 원하는 도메인으로 변경
             "honestly.space".parse::<HeaderValue>()?,  // www 버전도 추가
         ])
         .allow_methods([
