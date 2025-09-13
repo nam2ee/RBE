@@ -38,7 +38,7 @@ impl HikerClient {
         let hiker_response: HikerApiResponse = response.json().await?;
 
         let mut rng = rand::thread_rng();
-        let init_cool_count = rng.gen_range(1..=10);
+        let init_cool_count = rng.gen_range(1..=50);
         let init_bad_count = rng.gen_range(1..=10);
         
         // Hiker API 응답을 우리 User 구조체로 변환
