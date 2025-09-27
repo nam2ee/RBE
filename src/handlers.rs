@@ -24,14 +24,6 @@ pub async fn get_user(
     State(state): State<AppState>,
 ) -> Result<Json<ApiResponse<UserResponse>>, AppError> {
 
-    if username == "nam_2ee.eth" || username =="_gyuuyg_"  {
-        return 
-        Ok(Json(ApiResponse {
-                success: false,
-                data: None,
-                message: Some("그런 User는 없습니다".to_string()),
-            }))
-    }
     // 1. DB에서 사용자 찾기
     if let Some(user) = state.db.find_user(&username).await? {
         let random_cool_comments = get_random_comments(&user.cool_comment, 4);
